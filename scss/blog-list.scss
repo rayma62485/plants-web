@@ -1,0 +1,237 @@
+// import google font 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+//加入變數管理
+@import "variable";
+//加入layout版型
+@import "layout";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:$main-font;
+}
+//選取文字的效果
+*::selection{
+    background:$selection-color;
+    color:#fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+// scrollbar 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} 
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+//main
+#banner{
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            span{
+                color: rgb(12, 250, 119);
+            }
+            font-size: 70px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color:#fff;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        }
+        h3{
+            font-weight: 500;
+            font-size: 35px;
+            color: #fff;
+            text-shadow: 4px 5px 10px rgba(0,0,0,0.5);
+        }
+    }
+    .container{
+        @include container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 5%;
+        
+        .sub-title{
+            width: 100%;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #888;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .title-lab{
+                display: flex;
+                .lab{
+                    margin: 0 5px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    span{
+                        padding: 0 3px;
+                        color: orange;
+                        font-weight: 500;
+                    }
+
+                }
+            }
+        }
+        .card{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-bottom: 1px solid #888;
+            &:last-child{
+                border-bottom: none;
+            }
+            .image{
+                width: 40%;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .card-info{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 30px;
+                .date{
+                    padding: 5px 0;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color:#888;
+                    letter-spacing: 1px;
+                }
+                h2{
+                    font-size: 28px;
+                    font-weight: 500;
+                    padding:5px 0 ;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        &:hover{
+                            color: $sub-color;
+                        }
+                    }
+                }
+                p{
+                    color: #888;
+                    line-height: 1.4em;
+                    padding: 10px 0;
+                    height: 80px;
+                    overflow : hidden;
+                    text-overflow : ellipsis;
+                }
+                .read-more{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: $main-color;
+                    margin-top: 20px;
+                    transition: all 0.3s linear;
+                    &:hover{
+                        transform: translateX(10px);
+                    }
+                    i{
+                        margin-left: 2px;
+                    }
+                }
+            }
+        }
+    }
+    .page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        background-color: $bgc-gray;
+        a{
+            padding: 10px 15px;
+            background-color: $sub-color;
+            color:#fff;
+            border-radius: 7px;
+            border:1px solid $sub-color;
+            margin: 0 4px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+
+            &:hover{
+                color: $sub-color;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+//1130px
+@media screen and(max-width:1130px){
+    #banner{
+        .container{
+            .card{
+                .card-info{
+                    padding: 10px 25px;
+                }
+            }
+        }
+    }
+    
+}
+//1025px
+@media screen and(max-width:1025px){
+    #banner{
+        .title{
+            h3{
+                font-size: 30px;
+            }
+        }
+        .container{
+            .card{
+                .card-info{
+                    padding: 10px 25px;
+                    .date{
+                        font-size: 18px;
+                    }
+                    h2{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+//990px
+@media screen and(max-width:990px){
+    #banner{
+        .container{
+            padding: 50px 5%;
+            .card{
+                .image{
+                    width: 100%;
+                }
+                .card-info{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

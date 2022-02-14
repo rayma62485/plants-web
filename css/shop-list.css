@@ -1,0 +1,815 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::-moz-selection {
+  background: #2e8b25;
+  color: #fff;
+}
+
+*::selection {
+  background: #2e8b25;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+header {
+  width: 100%;
+  padding: 30px 0;
+  z-index: 10;
+  position: fixed;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+header.sticky {
+  padding: 15px 0;
+  background-color: rgba(209, 209, 209, 0.7);
+  -webkit-box-shadow: 1px 3px 7px gray;
+          box-shadow: 1px 3px 7px gray;
+}
+
+header .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .logo a {
+  font-size: 34px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+header .container .logo a span {
+  color: green;
+}
+
+header .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container nav ul li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+header .container nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+header .container nav ul li a:hover {
+  color: green;
+}
+
+header .container nav ul li a:hover:last-child {
+  color: none;
+}
+
+header .container nav ul li a i {
+  font-size: 21px;
+  color: black;
+}
+
+header .container .menu-btn {
+  display: none;
+}
+
+header .container .menu-btn ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .menu-btn ul li {
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+header .container .menu-btn ul li a {
+  font-size: 21px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.scroll-up-btn {
+  position: fixed;
+  height: 47px;
+  width: 44px;
+  background: green;
+  border-radius: 6px;
+  border: 1px solid green;
+  right: 30px;
+  bottom: 20px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.scroll-up-btn:hover {
+  color: green;
+  background-color: #fff;
+}
+
+.scroll-up-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.scroll-up-btn a:hover {
+  color: green;
+}
+
+.scroll-up-btn.show {
+  bottom: 40px;
+  opacity: 1;
+}
+
+footer {
+  padding-top: 30px;
+}
+
+footer .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer .container .col-4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 110px;
+          flex: 1 1 110px;
+  padding: 15px 10px;
+  margin-left: 10px;
+}
+
+footer .container .col-4 h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+footer .container .col-4 h2 span {
+  color: green;
+}
+
+footer .container .col-4 .phone, footer .container .col-4 .email, footer .container .col-4 .address {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-top: 5px;
+}
+
+footer .container .col-4 h3 {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer .container .col-4 ul {
+  text-align: center;
+}
+
+footer .container .col-4 ul li {
+  list-style-type: none;
+  padding: 4px 0;
+}
+
+footer .container .col-4 ul li a {
+  color: gray;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+footer .container .col-4 ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-copyright {
+  background-color: rgba(177, 177, 177, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  color: black;
+  margin-top: 30px;
+  font-weight: 500;
+  border-top: 1px solid rgba(177, 177, 177, 0.3);
+}
+
+@media screen and (max-width: 1100px) {
+  header .container .logo a {
+    font-size: 30px;
+  }
+  header .container nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    background-color: #caf0c2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  header .container nav.active {
+    left: 0;
+  }
+  header .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .container nav ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+  header .container nav ul li:nth-child(7) {
+    display: none;
+  }
+  header .container nav ul li:nth-child(8) {
+    display: none;
+  }
+  header .container nav ul li a {
+    margin: 25px 0;
+    font-size: 25px;
+  }
+  header .container .menu-btn {
+    display: block;
+  }
+  header .container .menu-btn ul li:nth-child(3) {
+    z-index: 300;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .container .logo a {
+    padding: 10px 15px;
+    font-size: 27px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::-moz-selection {
+  background: #2e8b25;
+  color: #fff;
+}
+
+*::selection {
+  background: #2e8b25;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#shop .title {
+  background-color: rgba(32, 66, 21, 0.5);
+  -webkit-box-shadow: 2px 5px 10px rgba(32, 66, 21, 0.3);
+          box-shadow: 2px 5px 10px rgba(32, 66, 21, 0.3);
+}
+
+#shop .title .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 110px 5% 100px;
+}
+
+#shop .title .container .promote {
+  width: calc(50% - 20px);
+}
+
+#shop .title .container .promote h1 {
+  text-transform: uppercase;
+  font-size: 75px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 2px 4px 9px rgba(255, 255, 255, 0.6);
+}
+
+#shop .title .container .promote h2 {
+  font-size: 40px;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#shop .title .container .promote h2 span {
+  color: #1e4177;
+  font-size: 60px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+#shop .title .container .promote span {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#shop .title .container .promote p {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+#shop .title .container .images {
+  width: calc(50% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+#shop .title .container .images .image {
+  width: calc(33.33% - 10px);
+  height: 350px;
+  margin: 0 5px;
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+#shop .title .container .images .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#shop .instruction {
+  padding: 40px 0;
+}
+
+#shop .instruction .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#shop .instruction .container .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: calc(25% - 10px);
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#shop .instruction .container .card i {
+  padding: 5px;
+  font-size: 30px;
+}
+
+#shop .instruction .container .card h3 {
+  padding: 7px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#shop-menu {
+  padding: 100px 0;
+  background-color: rgba(199, 199, 199, 0.3);
+}
+
+#shop-menu .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+#shop-menu .container h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#shop-menu .container .shop-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+#shop-menu .container .shop-menu .cards {
+  width: calc(25% - 15px);
+  height: 100%;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+#shop-menu .container .shop-menu .cards .image {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+
+#shop-menu .container .shop-menu .cards .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px 7px 0 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+#shop-menu .container .shop-menu .cards .image img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#shop-menu .container .shop-menu .cards .menu-content {
+  text-align: center;
+  padding: 10px;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content a {
+  text-decoration: none;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content a h3 {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content a h3:hover {
+  color: green;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content p {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px 0;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content .stars i {
+  color: green;
+  margin: 0 2px;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content .price {
+  font-size: 22px;
+}
+
+#shop-menu .container .shop-menu .cards .menu-content .price span {
+  margin-left: 10px;
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+#shop-menu .container .load-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+#shop-menu .container .load-more a {
+  display: inline-block;
+  padding: 14px 18px;
+  font-size: 25px;
+  text-decoration: none;
+  color: green;
+  background-color: #fff;
+  border: 1px solid green;
+}
+
+#shop-menu .container .load-more a:hover {
+  color: #fff;
+  background-color: green;
+}
+
+#plan {
+  padding: 50px 0;
+}
+
+#plan .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+#plan .container h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#plan .container .plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#plan .container .plan .plan-col4 {
+  width: calc(25% - 10px);
+  padding: 10px;
+  border-radius: 7px;
+  margin: 0 5px;
+  margin-bottom: 10px;
+  border: 1px solid green;
+  background-color: #fcf8c4;
+}
+
+#plan .container .plan .plan-col4 h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+#plan .container .plan .plan-col4 p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+#plan .container .plan .plan-col4 .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 10px;
+  font-size: 35px;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+}
+
+#plan .container .plan .plan-col4 .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#plan .container .plan .plan-col4 .add a {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  background-color: green;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 150px;
+  text-decoration: none;
+  border: 1px solid green;
+}
+
+#plan .container .plan .plan-col4 .add a:hover {
+  color: green;
+  background-color: #fff;
+}
+
+#notice {
+  padding: 30px 0;
+  background-color: rgba(199, 199, 199, 0.3);
+}
+
+#notice .container {
+  max-width: calc(1300px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+#notice .container h2 {
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+#notice .container ol {
+  padding: 10px;
+  list-style-type: upper-roman;
+}
+
+#notice .container ol li {
+  margin-left: 5px;
+  padding: 10px 0;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 1270px) {
+  #shop-menu .container .shop-menu .cards {
+    width: calc(33% - 15px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #shop .title .container .promote {
+    width: 100%;
+  }
+  #shop .title .container .images {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #shop .instruction .container .card {
+    width: calc(50% - 15px);
+  }
+  #plan {
+    padding: 50px 0;
+  }
+  #plan .container {
+    max-width: calc(1300px + 10%);
+    padding: 0 5%;
+    margin: 0 auto;
+  }
+  #plan .container h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  #plan .container .plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #plan .container .plan .plan-col4 {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #shop-menu .container .shop-menu .cards {
+    width: calc(50% - 13px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #shop-menu .container .shop-menu .cards {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=shop-list.css.map */

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MA,Sheng-Chu">
+    <meta name="description" content="購購物車頁面">
+    <title>付款頁面 | Medicinal Plants</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!-- Icon  -->
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="./css/shopping-cart.css">
+</head>
+<body>
+    <!-- header start  -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a  href="./index.html" title="回到首頁">Medicinal <span>plants.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="./index.html">Home</a></li>
+                    <li><a class="nav-link" href="./index.html">About</a></li>
+                    <li><a class="nav-link" href="./shop-list.html">Shop</a></li>
+                    <li><a class="nav-link" href="./blog-list.html">Blog</a></li>
+                    <li><a class="nav-link" href="./attend.html">Attend</a></li>
+                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li><a href="./shopping-cart.html" title="購物車"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href=""><i class="far fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <ul>
+                    <li><a href="./shopping-cart.html" title="購物車"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="" title="登入"><i class="far fa-user-circle"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <!-- main  -->
+    <main>
+        <!-- banner  -->
+        <section id="banner" style="background-image: url(./img/shopping-cart.jpg);width: 100%;height: 50vh;background-size: cover; background-repeat: no-repeat;background-position: left;">
+            <div class="container">
+                <h1>Shopping cart</h1>
+                <h3>請填寫訂購資訊</h3>
+            </div>
+            <div class="step">Step 02 <span>填寫資料與運送方式</span></div>
+        </section>
+
+        <!-- 選擇方式  -->
+        <section id="choose" >
+            <div class="container">
+                <form action=""     >
+                    <div class="pay">
+                        <h2>付款方式</h2>
+                        <div class="cash">
+                            <input id="cash" type="radio" name="payment" checked>
+                            <label for="cash">貨到付款</label>
+                        </div>
+                        <div class="credit-card">
+                            <input id="credit-card" type="radio" name="payment" >
+                            <label for="credit-card">線上刷卡</label>
+                        </div>
+                        <div class="atm">
+                            <input id="atm" type="radio" name="payment">
+                            <label for="atm">ATM 轉帳</label>
+                        </div>
+                        <div class="cvs-code">
+                            <input id="cvs-code" type="radio" name="payment">
+                            <label for="cvs-code">超商代碼</label>
+                        </div>
+                    </div>
+
+                    <div class="method">
+                        <h2>運送方式</h2>
+                        <div class="black-cat">
+                            <input id="black-cat" type="radio" name="shipment" checked>
+                            <label for="black-cat">黑貓宅配</label>
+                        </div>
+                        <div class="china">
+                            <input id="china" type="radio" name="shipment">
+                            <label for="china">中華郵政</label>
+                        </div>
+                        <div class="seven">
+                            <input id="seven" type="radio" name="shipment">
+                            <label for="seven">超商店到店</label>
+                        </div>
+                    </div>
+
+                    <div class="information">
+                        <h2>個人資料</h2>
+                        <div class="name">
+                            <label for="name">姓名<sup>*</sup> :</label>
+                            <input type="text"  id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="phone">
+                            <label for="phone">電話<sup>*</sup> :</label>
+                            <input type="tel"  id="phone" name="phone" placeholder="09XXXXXXXX" required>
+                        </div>
+                        <div class="email">
+                            <label for="email">信箱<sup>*</sup> :</label>
+                            <input type="email"  id="email" name="email" placeholder="abc123@gmail.com" required>
+                        </div>
+                        <div class="address">
+                            <label for="address">地址<sup>*</sup> :</label>
+                            <input type="text"  id="address" name="address" placeholder="地址" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 小結算區  -->
+        <section id="sum-detail" style="background-image: url(./img/shop-cart-bgi.jpg);width: 100%;"> 
+            <div class="container">
+                <div class="cards">
+                    <h2>品牌合作</h2>
+                    <p>以下企業員工消費可以有3%的優惠:<br>AAAAA公司 、BBBBB公司 、CCCCC公司 、DDDDD公司 、EEEEE公司。</p>
+                    <h3>歡迎使用以下消費方式</h3>
+                    <div class="credit-card">
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-paypal"></i>
+                        <i class="fa-brands fa-amazon-pay"></i>
+                        <i class="fa-brands fa-apple-pay"></i>
+                        <i class="fa-brands fa-google-pay"></i>
+                    </div>
+
+                </div>
+                <div class="sub-total">
+                    <h3>最後結算</h3>
+                    <table>
+                        <tr>
+                            <td>數量</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>小計</td>
+                            <td>$ <span>40.99</span></td>
+                        </tr>
+                        <tr>
+                            <td>運費</td>
+                            <td>$ <span>60</span></td>
+                        </tr>
+                        <tr>
+                            <td>總計</td>
+                            <td>$ <span>100.99</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- 按鈕  -->
+        <section id="pre-next-button" style="background-image: url(./img/shop-cart-bgi.jpg);width: 100%;">
+            <div class="container">
+                <div class="pre-btn">
+                    <a href="./shopping-cart.html">
+                        <i class="fa-solid fa-angle-left"></i>回前頁</a>
+                </div>
+                <div class="next-btn">
+                    <a href="./shopping-cart3.html">
+                        確認完成，送出訂單<i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- scroll up btn  -->
+    <div class="scroll-up-btn">
+        <a href="#banner">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- footer start  -->
+    <footer>
+        <div class="container">
+            <div class="col-4">
+                <h2>Medicinal <br><span>plants.</span></h2>
+                <div class="phone">phone: <span>09-XXX-XXX-XXX</span></div>
+                <div class="email">email: <span>abc@gmail.com</span></div>
+                <div class="address">address: <span>XXXXXXXXXXXXXXXXX</span></div>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            ⓒ 2022 Medicinal plants All Right Reserved  |  Only for practice.
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- js link  -->
+    <script src="./js/index.js"></script>
+</body>
+</html>

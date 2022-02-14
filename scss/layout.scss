@@ -1,0 +1,267 @@
+// import google font 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+//加入變數管理
+@import "variable";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:$main-font;
+}
+//選取文字的效果
+*::selection{
+    background:$selection-color;
+    color:#fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+// scrollbar 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} 
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+//header start
+header{
+    width: 100%;
+    padding: 30px 0 ;
+    z-index: 10;
+    position: fixed;
+    transition: all 0.3s ease;
+    background-color: $fff;
+    &.sticky{
+        padding: 15px 0;
+        background-color:rgba(209, 209, 209,0.7);
+        box-shadow: 1px 3px 7px $gray;
+    }
+    .container{
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            a{
+                font-size: 34px;
+                font-weight: 600;
+                color:$main-color;
+                text-decoration: none;
+                span{
+                    color: $sub-color;
+                }
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                li{
+                    list-style-type: none;
+                    margin-left: 20px;
+                    a{
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $main-color;
+                        transition: color 0.4s ease;
+                        &:hover{
+                            color: $sub-color;
+                            &:last-child{
+                                color: none;
+                            }
+                        }
+                        i{
+                            font-size: 21px;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-btn{
+            display: none;
+            ul{
+                display: flex;
+                li{
+                    margin-left: 20px;
+                    list-style-type: none;
+                    a{
+                        font-size: 21px;
+                        font-weight: 500;
+                        color: $main-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+//scroll up btn
+.scroll-up-btn{
+    position: fixed;
+    height: 47px;
+    width: 44px;
+    background: $sub-color;
+    border-radius: 6px;
+    border: 1px solid $sub-color;
+    right: 30px;
+    bottom: 20px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: all 0.3s ease-out;
+    &:hover{
+        color: $sub-color;
+        background-color: #fff;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        &:hover{
+            color: $sub-color;
+        }
+    }
+    &.show{
+        bottom: 40px;
+        opacity: 1;
+    }
+}
+//footer start
+footer{
+    padding-top: 30px;
+    .container{
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        .col-4{
+            flex: 1 1 110px; 
+            padding: 15px 10px;
+            margin-left: 10px;
+            h2{
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                span{
+                    color:$sub-color;
+                }
+            }
+            .phone, .email, .address{
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                padding-top: 5px ;
+            }
+            h3{
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            ul{
+                text-align: center;
+                li{
+                    list-style-type: none;
+                    padding: 4px 0;
+                    a{
+                        color: $gray;
+                        font-size: 14px;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .footer-copyright{
+        background-color: rgba(177, 177, 177, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        color: black;
+        margin-top: 30px;
+        font-weight: 500;
+        border-top: 1px solid rgba(177,177,177,0.3);
+    }
+}
+//1100px
+@media screen and (max-width:1100px){
+    header{
+        .container{
+            .logo{
+                a{
+                    font-size: 30px;
+                }
+            }
+            nav{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: -100%;
+                text-align: center;
+                background-color: #caf0c2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition:all 0.4s ease;
+                &.active{
+                    left: 0;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        display: inline-block;
+                        padding: 10px;
+                        &:nth-child(7){
+                            display: none;
+                        }
+                        &:nth-child(8){
+                            display: none;
+                        }
+                        a{
+                            margin: 25px 0;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+            .menu-btn{
+                display: block;
+                ul{
+                    li{
+                        &:nth-child(3){
+                            z-index: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//900px
+@media screen and (max-width:900px){
+    header{
+        .container{
+            .logo{
+                a{
+                    padding: 10px 15px;
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+}

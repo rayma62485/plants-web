@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MA,Sheng-Chu">
+    <meta name="description" content="關於藥用植物以及商城">
+    <meta name="keywords" content="藥用植物">
+    <meta name="robots" content="index,follow">
+    <title>首頁 | Medicinal Plants</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!-- swiper CDN -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- AOS CDN  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Icon  -->
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- loading  -->
+    <div class="loader">
+        <img src="./img/loading-image.png" >
+        <h3>loading...</h3>
+    </div>
+
+    <!-- header start  -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a  href="./index.html" title="回到首頁">Medicinal <span>plants.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#shop">Shop</a></li>
+                    <li><a class="nav-link" href="#blog">Blog</a></li>
+                    <li><a class="nav-link" href="./attend.html">Attend</a></li>
+                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li><a href="./shopping-cart.html" title="購物車"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href=""><i class="far fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <ul>
+                    <li><a href="./shopping-cart.html" title="購物車"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="" title="登入"><i class="far fa-user-circle"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- main start  -->
+    <main>
+        <!-- banner  -->
+        <section id="home">
+            <video src="./img/video.mp4" autoplay loop muted type="mp4" ></video>
+            <img src="./img/cover.jpg">
+            <div class="home-content">
+                <h3>Explore the beauty of <span>nature</span></h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ullam.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <a href="#">see more</a>
+            </div>
+            <div class="scroll">
+                <span>scroll</span>
+            </div>
+        </section>
+
+        <!-- about start  -->
+        <section id="about">
+            <div class="container">
+                <div class="about-img" >
+                    <img src="./img/about-img.jpg" alt="這是植物藥物" title="this is a plants">
+                </div>
+                <div class="about-content">
+                    <h3><span>A</span>bout us</h3>
+                    <span>Lorem ipsum dolor, sit amet consectetur.</span>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione veritatis voluptas impedit perspiciatis tenetur quam neque, distinctio inventore magni fuga repellendus pariatur! Et, pariatur provident?</p>
+                    <div class="about-images">
+                        <div class="card">
+                            <i class="fas fa-seedling"></i>
+                            <p>Planting</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-hand-holding-water"></i>
+                            <p>Take care of plants</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-tree"></i>
+                            <p>Grow healthy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- shop start  -->
+        <section id="shop">
+            <div class="container">
+                <h2>shop</h2>
+                <div class="shop  swiper">
+                    <div class="swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <img src="./img/popular-item.jpg" >
+                            <h3>Some popular item</h3>
+                            <div class="price">$49.99</div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <img src="./img/popular-item2.jpg" >
+                            <h3>Some popular item</h3>
+                            <div class="price">$49.99</div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <img src="./img/popular-item3.jpg" >
+                            <h3>Some popular item</h3>
+                            <div class="price">$49.99</div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <img src="./img/popular-item.jpg" >
+                            <h3>Some popular item</h3>
+                            <div class="price">$49.99</div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <img src="./img/popular-item4.jpg" >
+                            <h3>Some popular item</h3>
+                            <div class="price">$49.99</div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- shop menu  -->
+        <section id="our-menu">
+            <div class="container">
+                <h3>Our menu</h3>
+                <div class="see-more">
+                    <a href="./shop-list.html">view more <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="shop-menu">
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-1.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-2.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-3.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-4.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-5.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-6.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-7.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image">
+                            <img src="./img/menu-8.jpg" alt="menu">
+                        </div>
+                        <div class="menu-content">
+                            <a href=""><h3>Some menu item</h3></a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, mollitia!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="price">$39.99 <span>$49.99</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 過場  -->
+        <section id="small-banner">
+            <div class="container">
+                <div class="join-content">
+                    <h2>Do you want to join us?</h2>
+                    <p>Let us protect your health</p>
+                </div>
+                <form class="subscribe">
+                    <label for="email">Subscribe</label>
+                    <div>
+                        <input id="email" type="email" placeholder="Please write down your email">
+                        <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- blog  -->
+        <section id="blog">
+            <div class="container">
+                <div class="blog-video">
+                    <h3>Blog & Ne<span>w</span>s</h3>
+                    <!-- youtube insert  -->
+                    <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/7SePUE-CMwo" 
+                    title="kew plants video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="blog-list">
+                    <div class="card">
+                        <span><i class="far fa-calendar-alt"></i>111-02-06</span>
+                        <a href="#">
+                            <h2>瀕臨的植物危機</h2>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur commodi hic et voluptates. Possimus ullam numquam animi quod. Error eaque vel neque eos aliquam rem veniam dicta, voluptate dolore!</p>
+                    </div>
+                    <div class="card">
+                        <span><i class="far fa-calendar-alt"></i>111-02-01</span>
+                        <a href="#">
+                            <h2>氣候變化對植物的影響</h2>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur commodi hic et voluptates. Possimus ullam numquam animi quod. Error eaque vel neque eos aliquam rem veniam dicta, voluptate dolore!</p>
+                    </div>
+                    <div class="card">
+                        <span><i class="far fa-calendar-alt"></i>111-01-24</span>
+                        <a href="#">
+                            <h2>藥用植物如何幫助身體</h2>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur commodi hic et voluptates. Possimus ullam numquam animi quod. Error eaque vel neque eos aliquam rem veniam dicta, voluptate dolore!</p>
+                    </div>
+                    <a class="veiw-more" href="./blog-list.html">VEIW MORE<i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serve start  -->
+        <section id="serve" 
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
+            <div class="container">
+                <div class="title">
+                    <span>s</span>
+                    <span>e</span>
+                    <span>r</span>
+                    <span>v</span>
+                    <span>i</span>
+                    <span>c</span>
+                    <span>e</span>
+                </div>
+                <div class="service">
+                    <div class="service-item">
+                        <i class="fas fa-globe"></i>
+                        <h3>國際援助</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-seedling"></i>
+                        <h3>植物復育</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fab fa-medrt"></i>
+                        <h3>醫療協助</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-capsules"></i>
+                        <h3>開發新藥</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-mortar-pestle"></i>
+                        <h3>傳統療法</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-spa"></i>
+                        <h3>養生食品</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- scroll up btn  -->
+    <div class="scroll-up-btn">
+        <a href="#home">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- footer start  -->
+    <footer>
+        <div class="container">
+            <div class="col-4">
+                <h2>Medicinal <br><span>plants.</span></h2>
+                <div class="phone">phone: <span>09-XXX-XXX-XXX</span></div>
+                <div class="email">email: <span>abc@gmail.com</span></div>
+                <div class="address">address: <span>XXXXXXXXXXXXXXXXX</span></div>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            ⓒ 2022 Medicinal plants All Right Reserved  |  Only for practice.
+        </div>
+    </footer>
+
+    <!-- swiper js CDN  -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- AOS JS CDN  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- js link  -->
+    <script src="./js/index.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

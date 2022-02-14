@@ -1,0 +1,721 @@
+// import google font 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+//加入變數管理
+@import "variable";
+//加入shopping-cart 專屬layout版型
+@import "shopcart-layout";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:$main-font;
+
+    // input-narrow 消失
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+}
+//選取文字的效果
+*::selection{
+    background:$selection-color;
+    color:#fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+// scrollbar 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} 
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+//main
+//第一版面--------------------
+#banner{
+    padding:40px 0;
+    position: relative;
+    .container{
+        @include container;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            font-size: 65px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 4px 6px rgba(0,0,0,0.6);
+        }
+        h3{
+            font-size: 30px;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 2px 4px 6px rgba(0,0,0,0.6);
+        }
+    }
+    .step{
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        font-weight: 600;
+        font-size: 40px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        color: rgb(190, 190, 190);
+        span{
+            font-size: 37px;
+            margin-left: 5px;
+        }
+    }
+}
+
+// 購物清單
+#list{
+    padding: 70px 0;
+    .container{
+        @include container;
+        overflow: auto;
+        h2{
+            font-size: 28px;
+            padding: 5px;
+            border-bottom: 1px solid #888;
+        }
+        table{
+            width: 100%;
+            table-layout: fixed;
+            white-space: nowrap;
+            font-family: $sub-font;
+            margin-top: 5px;
+            thead{
+                padding: 5px 0;
+                background-color: rgba(138, 138, 138, 0.6);
+                tr{
+                    th{
+                        text-align: center;
+                        font-size: 18px;
+                        padding: 7px 10px;
+                        &:nth-child(1){
+                            width: 100px;
+                        }
+                        &:nth-child(2){
+                            width: 150px;
+                        }
+                        &:nth-child(3){
+                            width: 200px;
+                        }
+                        &:nth-child(4){
+                            width: 150px;
+                        }
+                        &:nth-child(5){
+                            width: 150px;
+                        }
+                        &:nth-child(6){
+                            width: 150px;   
+                        }
+                        small{
+                            margin-left: 5px;
+                            font-size: 13px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    &:nth-child(even){
+                        background-color: rgba(221, 255, 201, 0.6);
+                    }
+                    td{
+                        text-align: center;
+                        padding: 10px ;
+                        &:nth-child(1){
+                            width: 100px;
+                        }
+                        &:nth-child(2){
+                            width: 150px;
+                        }
+                        &:nth-child(3){
+                            width: 200px;
+                        }
+                        &:nth-child(4){
+                            width: 150px;
+                        }
+                        &:nth-child(5){
+                            width: 150px;
+                        }
+                        &:nth-child(6){
+                            width: 150px;
+                        }
+                        i{
+                            cursor: pointer;
+                            font-size: 22px;
+                            transition: all 0.2s ease-in;
+                            &:hover{
+                                color: rgb(230, 51, 51);
+                            }
+                        }
+                        img{
+                            width: 90px;
+                            object-fit: cover;
+                        }
+                        button{
+                            text-align: center;
+                            width: 27px;
+                            height: 27px;
+                            margin: 7px 5px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: none;
+                            cursor: pointer;
+                        }
+                        input{
+                            text-align: center;
+                            width: 70px;
+                            padding: 7px 10px 7px 5px;
+                            font-size:17px;
+                            outline: none;
+                        }
+                        strong{
+                            font-size: 17px;
+                            font-weight: 400;
+                            span{
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//小結算區
+#sum-details{
+    padding: 30px 0;
+    background-color: $bgc-gray;
+    .container{
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .cards{
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            h2{
+                padding: 5px 0; 
+                font-size: 22px;
+                font-weight: 600;   
+            }
+            p{
+                padding: 7px 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            h3{
+                margin-top: 10px;
+                font-size: 20px;
+                padding: 7px 0;
+                font-weight: 600;
+            }
+            .credit-card{
+                margin-top: 8px;
+                i{
+                    font-size: 25px;
+                    padding: 0 5px;
+                }
+            }
+        }
+        .sub-total{
+            width: calc(50% - 10px);
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid rgb(204, 204, 204);
+            h3{
+                font-size: 22px;
+                font-weight: 700;
+                padding: 5px 0;
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+                tr{
+                    td{
+                        padding: 7px;
+                        width: 50%;
+                        border: 1px solid #777;
+                        font-size: 18px;
+                        &:nth-child(2){
+                            text-align: end;
+                        }
+                        span{
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            a{
+                display: inline-block;
+                margin-top: 10px ;
+                padding: 9px 13px;
+                font-weight: 600;
+                font-size: 22px;
+                text-decoration: none;
+                color: #fff;
+                background-color: rgba(26, 139, 54, 0.7);
+                border-radius: 10px;
+                border: 1px solid rgba(26, 139, 54, 0.7);
+                transition: all 0.3s ease-out;
+                &:hover{
+                    color: rgba(26, 139, 54, 0.7);
+                    background-color: #fff;
+                }
+                i{
+                    margin-left: 9px;
+                }
+            }
+        }
+    }
+}
+
+//第2版面----------------------
+#choose{
+    padding: 50px 0;
+    .container{
+        @include container;
+        padding: 0 7%;
+        form{
+            .pay{
+                h2{
+                    padding: 7px 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    border-bottom: 1px solid #888;
+                }
+                .cash ,.credit-card ,.atm ,.cvs-code{
+                    padding: 5px 0;
+                    input{
+                        width: 15px;
+                        height: 15px;
+                    }
+                    label{
+                        cursor: pointer;
+                        margin-left: 7px;
+                        padding: 7px 0;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .method{
+                margin-top: 10px;
+                h2{
+                    padding: 7px 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    border-bottom: 1px solid #888;
+                }
+                .black-cat ,.china ,.atm ,.seven{
+                    padding: 5px 0;
+                    input{
+                        width: 15px;
+                        height: 15px;
+                    }
+                    label{
+                        cursor: pointer;
+                        margin-left: 7px;
+                        padding: 7px 0;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .information{
+                margin-top: 10px;
+                h2{
+                    padding: 7px 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    border-bottom: 1px solid #888;
+                }
+                .name ,.phone ,.email ,.address{
+                    padding: 7px 0;
+                    label{
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-right: 10px;
+                        sup{
+                            color: red;
+                        }
+                    }
+                    input{
+                        width: 65%;
+                        padding: 5px 7px;
+                        font-size: 18px;
+                        border-radius: 7px;
+                        border: 1px solid #888;
+                    }
+                }
+            }
+        }
+    }
+}
+//小結算區
+#sum-detail{
+    padding: 30px 0 20px;
+    background-color: $bgc-gray;
+    .container{
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .cards{
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            h2{
+                padding: 5px 0; 
+                font-size: 22px;
+                font-weight: 600;   
+            }
+            p{
+                padding: 7px 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            h3{
+                margin-top: 10px;
+                font-size: 20px;
+                padding: 7px 0;
+                font-weight: 600;
+            }
+            .credit-card{
+                margin-top: 8px;
+                i{
+                    font-size: 25px;
+                    padding: 0 5px;
+                }
+            }
+        }
+        .sub-total{
+            width: calc(50% - 10px);
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid rgb(204, 204, 204);
+            h3{
+                font-size: 22px;
+                font-weight: 700;
+                padding: 5px 0;
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+                tr{
+                    td{
+                        padding: 7px;
+                        width: 50%;
+                        border: 1px solid #777;
+                        font-size: 18px;
+                        &:nth-child(2){
+                            text-align: end;
+                        }
+                        span{
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//回前頁+結帳按鈕
+#pre-next-button{
+    padding: 10px 0 20px;
+    background-color: $bgc-gray;
+    .container{
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        .pre-btn , .next-btn{
+            a{
+                display: inline-block;
+                padding: 9px 13px;
+                font-weight: 600;
+                font-size: 22px;
+                text-decoration: none;
+                color: #fff;
+                background-color: rgba(26, 139, 54, 0.7);
+                border-radius: 10px;
+                border: 1px solid rgba(26, 139, 54, 0.7);
+                transition: all 0.3s ease-out;
+                &:hover{
+                    color: rgba(26, 139, 54, 0.7);
+                    background-color: #fff;
+                }
+                i{
+                    margin:0 9px;
+                }
+            }
+        }
+    }
+}
+
+//第3版面---------------------------------
+#order-final{
+    padding: 50px 0;
+    .container{
+        @include container;
+        h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            i{
+                margin-left: 7px;
+                color: $sub-color;
+            }
+        }
+        .final-order{
+            overflow: auto;
+            h2{
+                padding: 7px 0;
+                font-size: 30px;
+                font-weight: 550;
+                border-bottom: 1px solid #888;
+
+            }
+            table{
+                width: 100%;
+                table-layout: fixed;
+                white-space: nowrap;
+                font-family: $sub-font;
+                margin-top: 5px;
+                thead{
+                    padding: 5px 0;
+                    background-color: rgba(138, 138, 138, 0.6);
+                    tr{
+                        th{
+                            text-align: center;
+                            font-size: 18px;
+                            padding: 7px 10px;
+                            &:nth-child(1){
+                                width: 150px;
+                            }
+                            &:nth-child(2){
+                                width: 200px;
+                            }
+                            &:nth-child(3){
+                                width: 150px;
+                            }
+                            &:nth-child(4){
+                                width: 150px;
+                            }
+                            &:nth-child(5){
+                                width: 150px;   
+                            }
+                            small{
+                                margin-left: 5px;
+                                font-size: 13px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        &:nth-child(even){
+                            background-color: rgba(221, 255, 201, 0.6);
+                        }
+                        td{
+                            text-align: center;
+                            padding: 10px ;
+                            &:nth-child(1){
+                                width: 100px;
+                            }
+                            &:nth-child(2){
+                                width: 150px;
+                            }
+                            &:nth-child(3){
+                                width: 200px;
+                            }
+                            &:nth-child(4){
+                                width: 150px;
+                            }
+                            &:nth-child(5){
+                                width: 150px;
+                            }
+                            &:nth-child(6){
+                                width: 150px;
+                            }
+                            i{
+                                cursor: pointer;
+                                font-size: 22px;
+                                transition: all 0.2s ease-in;
+                                &:hover{
+                                    color: rgb(230, 51, 51);
+                                }
+                            }
+                            img{
+                                width: 90px;
+                                object-fit: cover;
+                            }
+                            input{
+                                text-align: center;
+                                width: 70px;
+                                padding: 7px 10px 7px 5px;
+                                font-size:17px;
+                                outline: none;
+                            }
+                            strong{
+                                font-size: 17px;
+                                font-weight: 400;
+                                span{
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        .send-info{
+            margin-top: 10px;
+            h2 {
+                padding: 7px 0;
+                font-size: 30px;
+                font-weight: 550;
+                border-bottom: 1px solid #888;
+            }
+            .name ,.phone ,.email ,.address ,.payment-method ,.shipping-method{
+                padding: 7px 0;
+                font-size: 22px;
+                font-weight: 600;
+                span{
+                    font-weight: 550;
+                    color: rgb(43, 43, 43);
+                    margin-left: 9px;
+                }
+                
+            }
+            h3{
+                margin-top: 15px;
+                padding: 7px 0;
+                font-size: 30px;
+                font-weight: 550;
+                border-bottom: 1px solid #888;
+            }
+        }
+    }
+}
+// 明細 
+#finally{
+    padding: 30px 0;
+    background-color: $bgc-gray;
+    .container{
+        @include container;
+        display: flex;
+        justify-content: end;
+        .sub-total{
+            width: 50%;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid rgb(204, 204, 204);
+            h3{
+                font-size: 22px;
+                font-weight: 700;
+                padding: 5px 0;
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+                tr{
+                    td{
+                        padding: 7px;
+                        width: 50%;
+                        border: 1px solid #777;
+                        font-size: 18px;
+                        &:nth-child(2){
+                            text-align: end;
+                        }
+                        span{
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            a{
+                margin-top: 10px;
+                display: inline-block;
+                padding: 9px 13px;
+                font-weight: 600;
+                font-size: 22px;
+                text-decoration: none;
+                color: #fff;
+                background-color: rgba(26, 139, 54, 0.7);
+                border-radius: 10px;
+                border: 1px solid rgba(26, 139, 54, 0.7);
+                transition: all 0.3s ease-out;
+                &:hover{
+                    color: rgba(26, 139, 54, 0.7);
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+//media ----------------------------
+
+//900px
+@media screen and(max-width:900px){
+    #banner{
+        .step{
+            font-size: 35px;
+            }
+        }
+    #sum-details{
+        .container{
+            .cards{
+                width: 100%;
+            }
+            .sub-total{
+                width: 100%;
+            }
+        }
+    }
+
+    //版面2-----------
+    #sum-detail{
+        .container{
+            .cards{
+                width: 100%;
+            }
+            .sub-total{
+                width: 100%;
+            }
+        }
+    }
+}
+//850px
+@media screen and(max-width:850px){
+    #finally{
+        .container{
+            .sub-total{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+//container
+@mixin container {
+    max-width: calc(1300px + 10%);
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+// 顏色區 
+$main-color:black;
+$sub-color:green;
+$bgc-gray:rgba(199, 199, 199, 0.3);
+$selection-color:rgb(46, 139, 37);
+$gray:gray;
+$fff:#fff;
+//字體區
+$main-font:'Poppins', sans-serif;
+$sub-font: 'Ubuntu', sans-serif;
+

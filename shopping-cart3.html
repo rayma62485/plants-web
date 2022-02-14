@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MA,Sheng-Chu">
+    <meta name="description" content="購購物車頁面">
+    <title>完成訂購 | Medicinal Plants</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!-- Icon  -->
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="./css/shopping-cart.css">
+</head>
+<body>
+    <!-- header start  -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a  href="./index.html" title="回到首頁">Medicinal <span>plants.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="./index.html">Home</a></li>
+                    <li><a class="nav-link" href="./index.html">About</a></li>
+                    <li><a class="nav-link" href="./shop-list.html">Shop</a></li>
+                    <li><a class="nav-link" href="./blog-list.html">Blog</a></li>
+                    <li><a class="nav-link" href="./attend.html">Attend</a></li>
+                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li><a href="./shopping-cart.html" title="購物車"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href=""><i class="far fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <ul>
+                    <li><a href="./shopping-cart.html" title="購物車"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="" title="登入"><i class="far fa-user-circle"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- main  -->
+    <main>
+        <!-- banner  -->
+        <section id="banner" style="background-image: url(./img/shopping-cart.jpg);width: 100%;height: 50vh;background-size: cover; background-repeat: no-repeat;background-position: left;">
+            <div class="container">
+                <h1>Shopping cart</h1>
+                <h3>請確認你的訂單</h3>
+            </div>
+            <div class="step">Step 03 <span>完成訂購</span></div>
+        </section>
+
+        <!-- 購物清單  -->
+        <section id="order-final">
+            <div class="container">
+                <h1>訂單成立<i class="fa-solid fa-circle-check"></i></h1>
+                <div class="final-order">
+                    <h2>訂單明細</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>商品圖片</th>
+                                <th>商品名稱</th>
+                                <th>價格</th>
+                                <th>數量</th>
+                                <th>總價<small>(TW)</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./img/menu-1.jpg" ></td>
+                                <td>橘玫瑰</td>
+                                <td>$ <span>120</span></td>
+                                <td>1</td>
+                                <td><strong>$ <span>99.99</span></strong></td>
+                            </tr>
+                            <tr class="order-item">
+                                <td><img src="./img/menu-2.jpg" ></td>
+                                <td>粉紅玫瑰</td>
+                                <td>$ <span>170</span></td>
+                                <td>1</td>
+                                <td><strong>$ <span>99.99</span></strong></td>
+                            </tr>
+                            <tr class="order-item">
+                                <td><img src="./img/menu-3.jpg" ></td>
+                                <td>櫻花</td>
+                                <td>$ <span>130</span></td>
+                                <td>1</td>
+                                <td><strong>$ <span>99.99</span></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="send-info">
+                    <!-- 寄送資料  -->
+                    <h2>寄送資料</h2>
+                    <div class="name">訂購人 :<span>王小明</span></div>
+                    <div class="phone">電話 :<span>09XXXXXXXX</span></div>
+                    <div class="email">信箱 :<span>admin123@gmail.com</span></div>
+                    <div class="address">地址 :<span>432 台中市小鎮村英雄路1號</span></div>
+                    <!-- 付款方式  -->
+                    <h3>付款及運送方式</h3>
+                    <div class="payment-method">付款方式 :<span>貨到付款</span></div>
+                    <div class="shipping-method">運送方式 :<span>黑貓宅配</span></div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- 小計  -->
+        <section id="finally" style="background-image: url(./img/shop-cart-bgi.jpg);width: 100%;">
+            <div class="container">
+                <div class="sub-total">
+                    <h3>訂單明細</h3>
+                    <table>
+                        <tr>
+                            <td>數量</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>小計</td>
+                            <td>$ <span>40.99</span></td>
+                        </tr>
+                        <tr>
+                            <td>運費</td>
+                            <td>$ <span>60</span></td>
+                        </tr>
+                        <tr>
+                            <td>總計</td>
+                            <td>$ <span>100.99</span></td>
+                        </tr>
+                    </table>
+                    <a href="./index.html">回到首頁</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- scroll up btn  -->
+    <div class="scroll-up-btn">
+        <a href="#banner">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- footer start  -->
+    <footer>
+        <div class="container">
+            <div class="col-4">
+                <h2>Medicinal <br><span>plants.</span></h2>
+                <div class="phone">phone: <span>09-XXX-XXX-XXX</span></div>
+                <div class="email">email: <span>abc@gmail.com</span></div>
+                <div class="address">address: <span>XXXXXXXXXXXXXXXXX</span></div>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>footer-item</h3>
+                <ul>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                    <li><a href="#">some tag</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            ⓒ 2022 Medicinal plants All Right Reserved  |  Only for practice.
+        </div>
+    </footer>
+
+    <!-- js link  -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
