@@ -50,7 +50,7 @@ header {
 
 header.sticky {
   padding: 15px 0;
-  background-color: rgba(209, 209, 209, 0.7);
+  background-color: #cccccc;
   -webkit-box-shadow: 1px 3px 7px gray;
           box-shadow: 1px 3px 7px gray;
 }

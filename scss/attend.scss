@@ -111,13 +111,13 @@ html{
                 transition: all 0.3s ease-out;
                 &:hover{
                     color: #fff;
-                    background-color: rgb(231, 130, 89);
-                    border: 2px solid rgb(231, 130, 89);
+                    background-color: $selection-color;
+                    border: 2px solid $selection-color;
                 }
                 &.active{
                     color: #fff;
-                    background-color: rgb(231, 130, 89);
-                    border: 2px solid rgb(231, 130, 89);
+                    background-color: $selection-color;
+                    border: 2px solid $selection-color;
                 }
             }
         }

@@ -51,7 +51,7 @@ header {
 
 header.sticky {
   padding: 15px 0;
-  background-color: rgba(209, 209, 209, 0.7);
+  background-color: #cccccc;
   -webkit-box-shadow: 1px 3px 7px gray;
           box-shadow: 1px 3px 7px gray;
 }
@@ -472,14 +472,14 @@ html {
 
 #activity .container .tabs .tab:hover {
   color: #fff;
-  background-color: #e78259;
-  border: 2px solid #e78259;
+  background-color: #2e8b25;
+  border: 2px solid #2e8b25;
 }
 
 #activity .container .tabs .tab.active {
   color: #fff;
-  background-color: #e78259;
-  border: 2px solid #e78259;
+  background-color: #2e8b25;
+  border: 2px solid #2e8b25;
 }
 
 #activity .container .contents .content {
