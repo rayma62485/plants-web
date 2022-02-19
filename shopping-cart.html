@@ -212,7 +212,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            ⓒ 2022 Medicinal plants All Right Reserved  |  Only for practice.
+            &#169; 2022 Medicinal plants All Right Reserved  |  Only for practice.
         </div>
     </footer>
 
@@ -271,6 +271,19 @@
                 calculateItemSubtotal();
             });
         });
+        // 刪除購物車商品 
+        let deleteElements = document.querySelectorAll('.fa-trash-can');
+            deleteElements.forEach(function(deleteElement,index){
+                deleteElement.addEventListener('click',function(){
+                    let yes = confirm("是否要將該商品從購物車中刪除？");
+                    if (yes) {
+                        orderElements[index].remove();
+                        calculateOrderSum();
+                    } else {
+                        return;
+                    }
+                });
+            });
         //總計
         function calculateOrderSum() {
             let count = 0;
@@ -292,18 +305,6 @@
             sumFee.innerHTML = fee;
             sumTotal.innerHTML = subtotal + fee;
         }
-        // 刪除購物車商品 
-        let deleteElements = document.querySelectorAll('.fa-trash-can');
-            deleteElements.forEach(function(deleteElement,index){
-                deleteElement.addEventListener('click',function(){
-                    let yes = confirm("是否要將該商品從購物車中刪除？");
-                    if (yes) {
-                        orderElements[index].remove();
-                    } else {
-                        return;
-                    }
-                });
-            });
     </script>
 </body>
 </html>
