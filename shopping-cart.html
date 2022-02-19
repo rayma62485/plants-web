@@ -79,25 +79,25 @@
                             <td><i class="fa-solid fa-trash-can"></i></td>
                             <td><img src="./img/menu-1.jpg" ></td>
                             <td>金輝玫瑰</td>
-                            <td>$ <span>150.00</span></td>
-                            <td><button>-</button><input type="number" value="1"><button>+</button></td>
-                            <td><strong>$ <span>150.00</span></strong></td>
+                            <td>$ <span class="unit-price" >150.00</span></td>
+                            <td><button class="minus">-</button><input class="qty" type="number" value="1"><button class="plus">+</button></td>
+                            <td><strong>$ <span class="item-price">150.00</span></strong></td>
                         </tr>
                         <tr class="order-item">
                             <td><i class="fa-solid fa-trash-can"></i></td>
                             <td><img src="./img/menu-2.jpg" ></td>
                             <td>粉紅佳人</td>
-                            <td>$ <span>120.00</span></td>
-                            <td><button>-</button><input type="number" value="1"><button>+</button></td>
-                            <td><strong>$ <span>120.00</span></strong></td>
+                            <td>$ <span class="unit-price" >120.00</span></td>
+                            <td><button class="minus">-</button><input class="qty" type="number" value="1"><button class="plus">+</button></td>
+                            <td><strong>$ <span class="item-price">120.00</span></strong></td>
                         </tr>
                         <tr class="order-item">
                             <td><i class="fa-solid fa-trash-can"></i></td>
                             <td><img src="./img/menu-3.jpg" ></td>
                             <td>梅花</td>
-                            <td>$ <span>220.00</span></td>
-                            <td><button>-</button><input type="number" value="1"><button>+</button></td>
-                            <td><strong>$ <span>220.00</span></strong></td>
+                            <td>$ <span class="unit-price" >220.00</span></td>
+                            <td><button class="minus">-</button><input class="qty" type="number" value="1"><button class="plus">+</button></td>
+                            <td><strong>$ <span class="item-price">220.00</span></strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -126,19 +126,19 @@
                     <table>
                         <tr>
                             <td>數量</td>
-                            <td>1</td>
+                            <td class="sum-count">1</td>
                         </tr>
                         <tr>
                             <td>小計</td>
-                            <td>$ <span>40.99</span></td>
+                            <td>$ <span class="sum-subtotal">40.99</span></td>
                         </tr>
                         <tr>
                             <td>運費</td>
-                            <td>$ <span>60</span></td>
+                            <td>$ <span class="sum-fee">60</span></td>
                         </tr>
                         <tr>
                             <td>總計</td>
-                            <td>$ <span>100.99</span></td>
+                            <td>$ <span class="sum-total">100.99</span></td>
                         </tr>
                     </table>
                     <a href="./shopping-cart2.html">前往下一步<i class="fa-solid fa-angle-right"></i></a>
@@ -219,6 +219,21 @@
     <!-- js link  -->
     <script src="./js/index.js"></script>
     <script>
+        //上半區
+        let orderItem = document.querySelectorAll('.order-item');
+        let addBtn = document.querySelectorAll('plus');
+        let reduceBtn = document.querySelectorAll('minus');
+        let inputCount = document.querySelectorAll('qty');
+        let itemSubtotal = document.querySelectorAll('item-price');
+        let unitPrice = document.querySelectorAll('unit-price');
+        //小計區
+        let sumCount = document.querySelector('.sum-count');
+        let sumSubtotal = document.querySelector('.sum-subtotal');
+        let sumFee = document.querySelector('.sum-fee');
+        let sumTotal = document.querySelector('.sum-total');
+
+        
+
         // 刪除購物車商品 
         let deleteElements = document.querySelectorAll('.fa-trash-can');
         let orderElements = document.querySelectorAll('.order-item');
