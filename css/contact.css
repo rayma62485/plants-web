@@ -450,6 +450,18 @@ html {
   margin-left: 5px;
 }
 
+#contact .container .contact-info a {
+  width: 220px;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 7px 10px;
+  text-decoration: none;
+  color: #555;
+  background-color: bisque;
+  border: 1px solid bisque;
+  border-radius: 7px;
+}
+
 #contact .container .contact-person {
   -webkit-box-flex: 2;
       -ms-flex: 2 1 400px;
@@ -489,8 +501,8 @@ html {
 }
 
 #contact .container .contact-person .card:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 #contact .container .contact-person .card .image {

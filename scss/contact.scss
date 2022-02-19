@@ -85,6 +85,17 @@ html{
                     margin-left: 5px;
                 }
             }
+            a{
+                width: 220px;
+                margin-top: 5px;
+                display: inline-block;
+                padding: 7px 10px;
+                text-decoration: none;
+                color: #555;
+                background-color: bisque;
+                border: 1px solid bisque;
+                border-radius: 7px;
+            }
         }
         .contact-person{
             flex: 2 1 400px;
@@ -112,7 +123,7 @@ html{
                 background-color: #fff;
                 transition: all 0.3s linear;
                 &:hover{
-                    transform: scale(0.9);
+                    transform: scale(0.95);
                 }
                 .image{
                     width: 80px;
