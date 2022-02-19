@@ -81,7 +81,7 @@
                             <td>金輝玫瑰</td>
                             <td>$ <span class="unit-price" >150.00</span></td>
                             <td><button class="minus">-</button><input class="qty" type="number" value="1"><button class="plus">+</button></td>
-                            <td><strong>$ <span class="item-price">150.00</span></strong></td>
+                            <td><strong>$ <span class="item-price"></span></strong></td>
                         </tr>
                         <tr class="order-item">
                             <td><i class="fa-solid fa-trash-can"></i></td>
@@ -89,15 +89,15 @@
                             <td>粉紅佳人</td>
                             <td>$ <span class="unit-price" >120.00</span></td>
                             <td><button class="minus">-</button><input class="qty" type="number" value="1"><button class="plus">+</button></td>
-                            <td><strong>$ <span class="item-price">120.00</span></strong></td>
+                            <td><strong>$ <span class="item-price"></span></strong></td>
                         </tr>
                         <tr class="order-item">
                             <td><i class="fa-solid fa-trash-can"></i></td>
                             <td><img src="./img/menu-3.jpg" ></td>
                             <td>梅花</td>
-                            <td>$ <span class="unit-price" >220.00</span></td>
+                            <td>$ <span class="unit-price">220.00</span></td>
                             <td><button class="minus">-</button><input class="qty" type="number" value="1"><button class="plus">+</button></td>
-                            <td><strong>$ <span class="item-price">220.00</span></strong></td>
+                            <td><strong>$ <span class="item-price"></span></strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -220,27 +220,89 @@
     <script src="./js/index.js"></script>
     <script>
         //上半區
-        let orderItem = document.querySelectorAll('.order-item');
-        let addBtn = document.querySelectorAll('plus');
-        let reduceBtn = document.querySelectorAll('minus');
-        let inputCount = document.querySelectorAll('qty');
-        let itemSubtotal = document.querySelectorAll('item-price');
-        let unitPrice = document.querySelectorAll('unit-price');
+        let orderElements = document.querySelectorAll('.order-item');
+        let plusBtn = document.querySelectorAll('.plus');
+        let minusBtn = document.querySelectorAll('.minus');
+        let qtyInput = document.querySelectorAll('.qty');
+        let itemSubtotal = document.querySelectorAll('.item-price');
+        let unitPrice = document.querySelectorAll('.unit-price');
         //小計區
         let sumCount = document.querySelector('.sum-count');
         let sumSubtotal = document.querySelector('.sum-subtotal');
         let sumFee = document.querySelector('.sum-fee');
         let sumTotal = document.querySelector('.sum-total');
+        //載入畫面先跑一次
+        window.onload = function () {
+            calculateItemSubtotal();
+        };
+        //++
+        plusBtn.forEach(function(plusbtn,index){
+            plusbtn.addEventListener('click',function(){
+                if(qtyInput[index].value < 100){
+                qtyInput[index].value = Number(qtyInput[index].value)+1;
+                }
+                calculateItemSubtotal();
+            });
+        });
+        //--
+        minusBtn.forEach(function(minusbtn,index){
+            minusbtn.addEventListener('click',function(){
+                if(qtyInput[index].value > 1){
+                qtyInput[index].value = Number(qtyInput[index].value)-1;
+                }
+                calculateItemSubtotal();
+            });
+        });
+        // 單品小計：單價 * 數量
+        function calculateItemSubtotal() {
+            itemSubtotal.forEach(function (elem, index) {
+                let unit = parseFloat(unitPrice[index].textContent);
+                let qty = parseFloat(qtyInput[index].value);
+                elem.innerHTML = unit * qty;
+            });
+            calculateOrderSum();
+        }
+        //輸入框發生變化時，重新計算單品小計
+        qtyInput.forEach(function (em, index) {
+            em.addEventListener("change", function () {
+                if (qtyInput[index].value <= 0) {
+                    qtyInput[index].value = 1;
+                }
+                calculateItemSubtotal();
+            });
+        });
+        //總計
+        function calculateOrderSum() {
+            let count = 0;
+            let subtotal = 0;
+            let fee = 200;
 
-        
-
+            for (let i = 0; i < orderElements.length; i++) {
+                // 計算商品數量總和
+                count += parseInt(qtyInput[i].value);
+                // 計算商品小計總和
+                subtotal += parseFloat(itemSubtotal[i].textContent);
+            }
+            // 如果訂單小計總和大於等於 1000 則免運
+            if (subtotal >= 1000) {
+                fee = 0;
+            }
+            sumCount.innerHTML = count;
+            sumSubtotal.innerHTML = subtotal;
+            sumFee.innerHTML = fee;
+            sumTotal.innerHTML = subtotal + fee;
+        }
         // 刪除購物車商品 
         let deleteElements = document.querySelectorAll('.fa-trash-can');
-        let orderElements = document.querySelectorAll('.order-item');
 
         deleteElements.forEach(function(deleteElement,index){
             deleteElement.addEventListener('click',function(){
-                orderElements[index].remove();
+                let yes = confirm("是否要將該商品從購物車中刪除？");
+                if (yes) {
+                    orderElements[index].remove();
+                } else {
+                    return;
+                }
             });
         });
     </script>
