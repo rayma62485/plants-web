@@ -283,4 +283,34 @@ html {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 570px) {
+  #banner .title h3 {
+    font-size: 25px;
+  }
+  #banner .container .sub-title h2 {
+    font-size: 25px;
+  }
+  #banner .container .sub-title .title-lab .lab {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #banner .title h3 {
+    font-size: 20px;
+  }
+  #banner .container .sub-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #banner .container .sub-title .title-lab {
+    margin: 5px 0;
+  }
+  #banner .container .sub-title .title-lab .lab {
+    font-size: 14px;
+  }
+}
 /*# sourceMappingURL=blog-list.css.map */

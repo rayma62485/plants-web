@@ -81,10 +81,6 @@ html{
             color: #888;
             padding: 4px 0;
         }
-        p{
-            font-size: 16px;
-            padding: 5px 0;
-        }
     }
 }
 // activity 
@@ -186,11 +182,8 @@ html{
                     }
 
                 }
-
-
             }
         }
-
     }
 }
 
@@ -206,6 +199,71 @@ html{
             }
             p{
                 font-size: 14px;
+            }
+        }
+    }
+}
+//590px
+@media screen and (max-width:590px){
+    #attend{
+        .container{
+            h1{
+                font-size: 35px;
+            }
+            h3{
+                font-size: 16px;
+            }
+        }
+    }
+    #activity{
+        .container{
+            .tabs{
+                .tab{
+                    padding: 11px 14px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+//490px
+@media screen and (max-width:490px){
+    #activity{
+        .container{
+            .tabs{
+                .tab{
+                    padding: 8px 11px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+//470px
+@media screen and (max-width:470px){
+    #attend{
+        .container{
+            h1{
+                i{
+                    margin-right: 5px;
+                }
+                font-size: 28px;
+            }
+            h3{
+                font-size: 12px;
+            }
+        }
+    }
+}
+//400px
+@media screen and (max-width:400px){
+    #activity{
+        .container{
+            .tabs{
+                .tab{
+                    padding: 5px 8px;
+                    font-size: 16px;
+                }
             }
         }
     }

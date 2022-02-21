@@ -233,4 +233,46 @@ html{
         }
     }
 }
-
+//570px
+@media screen and (max-width:570px){
+    #banner{
+        .title{
+            h3{
+                font-size: 25px;
+            }
+        }
+        .container{
+            .sub-title{
+                h2{
+                    font-size: 25px;
+                }
+                .title-lab{
+                    .lab{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+//450px
+@media screen and (max-width:450px){
+    #banner{
+        .title{
+            h3{
+                font-size: 20px;
+            }
+        }
+        .container{
+            .sub-title{
+                flex-direction: column;
+                .title-lab{
+                    margin: 5px 0;
+                    .lab{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
