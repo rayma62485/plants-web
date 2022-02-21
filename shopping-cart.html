@@ -220,12 +220,14 @@
     <script src="./js/index.js"></script>
     <script>
         //上半區
-        let orderElements = document.querySelectorAll('.order-item');
+            let orderElements = document.querySelectorAll('.order-item');
         let plusBtn = document.querySelectorAll('.plus');
         let minusBtn = document.querySelectorAll('.minus');
         let qtyInput = document.querySelectorAll('.qty');
         let itemSubtotal = document.querySelectorAll('.item-price');
         let unitPrice = document.querySelectorAll('.unit-price');
+        //垃圾桶
+        let deleteElements = document.querySelectorAll('.fa-trash-can');
         //小計區
         let sumCount = document.querySelector('.sum-count');
         let sumSubtotal = document.querySelector('.sum-subtotal');
@@ -255,16 +257,16 @@
         });
         // 單品小計：單價 * 數量
         function calculateItemSubtotal() {
-            itemSubtotal.forEach(function (elem, index) {
+            itemSubtotal.forEach(function (element, index) {
                 let unit = parseFloat(unitPrice[index].textContent);
                 let qty = parseFloat(qtyInput[index].value);
-                elem.innerHTML = unit * qty;
+                element.innerHTML = unit * qty;
             });
             calculateOrderSum();
         }
         //輸入框發生變化時，重新計算單品小計
-        qtyInput.forEach(function (em, index) {
-            em.addEventListener("change", function () {
+        qtyInput.forEach(function (element, index) {
+            element.addEventListener("change", function () {
                 if (qtyInput[index].value <= 0) {
                     qtyInput[index].value = 1;
                 }
@@ -272,21 +274,21 @@
             });
         });
         // 刪除購物車商品 
-        let deleteElements = document.querySelectorAll('.fa-trash-can');
             deleteElements.forEach(function(deleteElement,index){
                 deleteElement.addEventListener('click',function(){
-                    let yes = confirm("是否要將該商品從購物車中刪除？");
-                    if (yes) {
+                    let ture = confirm("是否要將該商品從購物車中刪除？");
+                    if (ture) {
                         orderElements[index].remove();
+                        calculateItemSubtotal();
+                        calculateOrderSum();
                     } else {
                         return;
                     }
                 });
-                calculateItemSubtotal();
-                calculateOrderSum();
             });
         //總計
         function calculateOrderSum() {
+            let orderElements = document.querySelectorAll('.order-item');
             let count = 0;
             let subtotal = 0;
             let fee = 200;
