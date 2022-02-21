@@ -1021,6 +1021,18 @@ footer{
         }
     }
 }
+//560px
+@media screen and (max-width:560px){
+    .loader{
+        img{
+            width: 120px;
+        }
+        h3{
+            font-size: 30px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
 //480px
 @media screen and (max-width:480px){
     footer{
