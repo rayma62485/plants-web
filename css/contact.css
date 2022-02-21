@@ -337,6 +337,12 @@ footer .footer-copyright {
   font-family: "Poppins", sans-serif;
 }
 
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 *::-moz-selection {
   background: #2e8b25;
   color: #fff;

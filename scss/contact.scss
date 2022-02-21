@@ -9,6 +9,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family:$main-font;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
 }
 //選取文字的效果
 *::selection{

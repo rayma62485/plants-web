@@ -278,11 +278,12 @@
                     let yes = confirm("是否要將該商品從購物車中刪除？");
                     if (yes) {
                         orderElements[index].remove();
-                        calculateOrderSum();
                     } else {
                         return;
                     }
                 });
+                calculateItemSubtotal();
+                calculateOrderSum();
             });
         //總計
         function calculateOrderSum() {
