@@ -983,6 +983,32 @@ footer{
         }
     }
 }
+//670px
+@media screen and (max-width:670px){
+    footer{
+        .container{
+            .col-4{
+                h2{
+                    font-size: 18px;
+                }
+                h3{
+                    font-size: 15px;
+                }
+                ul{
+                    li{
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .footer-copyright{
+            font-size: 14px;
+        }
+    }
+}
 //640px
 @media screen and(max-width:640px){
     #our-menu{
@@ -990,6 +1016,39 @@ footer{
             .shop-menu{
                 .cards{
                     width: 100%;
+                }
+            }
+        }
+    }
+}
+//480px
+@media screen and (max-width:480px){
+    footer{
+        .footer-copyright{
+            font-size: 11px;
+        }
+    }
+}
+//450px
+@media screen and (max-width:450px){
+    header{
+        .container{
+            .logo{
+                a{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .menu-btn{
+        ul{
+            li{
+                margin-left: 5px;
+                a{
+                    i{
+                        font-size: 18px;
+
+                    }
                 }
             }
         }

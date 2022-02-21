@@ -197,9 +197,7 @@ footer .container {
 }
 
 footer .container .col-4 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 110px;
-          flex: 1 1 110px;
+  width: 16.66%;
   padding: 15px 10px;
   margin-left: 10px;
 }
