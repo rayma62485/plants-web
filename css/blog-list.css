@@ -329,6 +329,39 @@ footer .footer-copyright {
   }
 }
 
+@media screen and (max-width: 670px) {
+  footer .container .col-4 h2 {
+    font-size: 18px;
+  }
+  footer .container .col-4 h3 {
+    font-size: 15px;
+  }
+  footer .container .col-4 ul li a {
+    font-size: 14px;
+  }
+  footer .footer-copyright {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer .footer-copyright {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .container .logo a {
+    font-size: 22px;
+  }
+  .menu-btn ul li {
+    margin-left: 5px;
+  }
+  .menu-btn ul li a i {
+    font-size: 18px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -267,27 +267,8 @@ footer{
 }
 //670px
 @media screen and (max-width:670px){
-    footer{
-        .container{
-            .col-4{
-                h2{
-                    font-size: 18px;
-                }
-                h3{
-                    font-size: 15px;
-                }
-                ul{
-                    li{
-                        a{
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-        }
-        .footer-copyright{
-            font-size: 14px;
-        }
+    .footer-copyright{
+        font-size: 14px;
     }
 }
 //480px
