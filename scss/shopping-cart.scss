@@ -719,3 +719,91 @@ html{
         }
     }
 }
+//570px
+@media screen and(max-width:570px){
+    #banner{
+        .container{
+            h1{
+                font-size: 50px;
+            }
+            h3{
+                font-size: 25px;
+            }
+        }
+        .step{
+            span{
+                font-size: 25px;
+                margin-left: 3px;
+            }
+        }
+    }
+}
+//500px
+@media screen and(max-width:500px){
+    #pre-next-button{
+        .container{
+            .pre-btn , .next-btn{
+                a{
+                    display: inline-block;
+                    padding: 6px 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    // 第三版面------
+    #order-final{
+        .container{
+            .send-info{
+                h2 {
+                    font-size: 25px;
+                }
+                .name ,.phone ,.email ,.address ,.payment-method ,.shipping-method{
+                    font-size: 20px;
+                }
+                h3{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    #finally{
+        a{
+            margin-top: 15px;
+            padding: 6px 10px;
+            font-size: 20px;
+        }
+    }
+}
+//460px
+@media screen and(max-width:460px){
+    #banner{
+        .container{
+            h1{
+                font-size: 45px;
+            }
+            h3{
+                font-size: 20px;
+            }
+        }
+        .step{
+            span{
+                font-size: 20px;
+            }
+        }
+    }
+}
+//400px
+@media screen and(max-width:400px){
+    #pre-next-button{
+        .container{
+            .pre-btn , .next-btn{
+                a{
+                    display: inline-block;
+                    padding: 5px 9px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
