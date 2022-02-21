@@ -1021,6 +1021,16 @@ footer{
         }
     }
 }
+//590px
+@media screen and (max-width:590px){
+    #home{
+        .home-content{
+            h3{
+                font-size: 30px;
+            }
+        }
+    }
+}
 //560px
 @media screen and (max-width:560px){
     .loader{

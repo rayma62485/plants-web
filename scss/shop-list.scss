@@ -34,7 +34,6 @@ html{
 
 //main
 #shop{
-    
     .title{
         background-color: rgba(32, 66, 21, 0.5);
         box-shadow: 2px 5px 10px rgba(32, 66, 21, 0.3) ;
@@ -398,6 +397,47 @@ html{
             .shop-menu{
                 .cards{
                     width: 100%;
+                }
+            }
+        }
+    }
+    #plan{
+        .container{
+            h2{
+                font-size: 35px;
+            }
+            .plan{
+                .plan-col4{
+                    width: 100%;
+                    h3{
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+//500px
+@media screen and (max-width:500px){
+    #shop{
+        .title{
+            .container{
+                .promote{
+                    h1{
+                        font-size: 60px;
+                    }
+                    h2{
+                        font-size: 30px;
+                        }
+                    span{
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
                 }
             }
         }

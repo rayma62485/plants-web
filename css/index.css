@@ -1216,6 +1216,12 @@ footer .footer-copyright {
   }
 }
 
+@media screen and (max-width: 590px) {
+  #home .home-content h3 {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .loader img {
     width: 120px;

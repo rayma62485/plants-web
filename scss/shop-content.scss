@@ -286,6 +286,9 @@ html{
             &.swiper {
                 width: 100%;
               }
+            .swiper-pagination-bullet{
+                background-color: $sub-color;
+            }
             .swiper-wrapper{
                 display: flex;
                 padding: 20px 10px;
@@ -345,15 +348,6 @@ html{
         }
     }
 }
-
-
-
-
-
-
-
-
-
 
 //1110px
 @media screen and(max-width:1110px){

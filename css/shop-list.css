@@ -481,5 +481,32 @@ html {
   #shop-menu .container .shop-menu .cards {
     width: 100%;
   }
+  #plan .container h2 {
+    font-size: 35px;
+  }
+  #plan .container .plan .plan-col4 {
+    width: 100%;
+  }
+  #plan .container .plan .plan-col4 h3 {
+    font-size: 22px;
+  }
+  #plan .container .plan .plan-col4 p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #shop .title .container .promote h1 {
+    font-size: 60px;
+  }
+  #shop .title .container .promote h2 {
+    font-size: 30px;
+  }
+  #shop .title .container .promote span {
+    font-size: 16px;
+  }
+  #shop .title .container .promote p {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=shop-list.css.map */
