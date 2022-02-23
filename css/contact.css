@@ -300,8 +300,6 @@ html {
 }
 
 #form .container .thank img {
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
   border-radius: 7px;
   width: 100%;
   -webkit-animation: animation 4s ease-out 3 backwards;
